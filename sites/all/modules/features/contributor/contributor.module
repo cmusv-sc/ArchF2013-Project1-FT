@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Contributor feature.
+ */
+
+include_once 'contributor.features.inc';
