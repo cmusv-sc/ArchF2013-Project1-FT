@@ -154,7 +154,7 @@ function meeting_minutes_default_page_manager_handlers() {
     $pane->pid = 'new-4';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_agenda';
+    $pane->subtype = 'node:field_notes';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -180,6 +180,34 @@ function meeting_minutes_default_page_manager_handlers() {
     $display->panels['right'][1] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_agenda';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][2] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
     $pane->panel = 'top';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -202,8 +230,8 @@ function meeting_minutes_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['top'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['top'][0] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
