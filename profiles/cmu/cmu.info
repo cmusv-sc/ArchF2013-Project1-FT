@@ -39,9 +39,10 @@ dependencies[] = date_popup
 dependencies[] = token
 
 dependencies[] = contributor
+dependencies[] = advisor
 dependencies[] = meeting_minutes
+dependencies[] = project
 dependencies[] = site_configuration
-
 
 ; Information added by  packaging script on 2013-11-20
 version = "7.24"
