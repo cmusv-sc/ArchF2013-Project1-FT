@@ -34,6 +34,7 @@ dependencies[] = url
 dependencies[] = field_group
 dependencies[] = cck_phone
 dependencies[] = views
+dependencies[] = views_content
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = token
