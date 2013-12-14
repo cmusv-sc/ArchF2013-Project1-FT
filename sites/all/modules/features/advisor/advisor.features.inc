@@ -28,7 +28,7 @@ function advisor_node_info() {
     'advisor' => array(
       'name' => t('Advisor'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Project advisor profile'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
