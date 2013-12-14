@@ -40,6 +40,7 @@ dependencies[] = token
 
 dependencies[] = contributor
 dependencies[] = meeting_minutes
+dependencies[] = site_configuration
 
 
 ; Information added by  packaging script on 2013-11-20
