@@ -15,10 +15,25 @@ function project_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Project Page Template';
   $page->admin_description = '';
-  $page->path = 'project-template';
+  $page->path = 'project-template/%pid';
   $page->access = array();
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'pid' => array(
+      'id' => 1,
+      'identifier' => 'Taxonomy term: ID',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'tid',
+        'vids' => array(
+          2 => '2',
+          1 => 0,
+        ),
+        'breadcrumb' => 1,
+        'transform' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -129,7 +144,7 @@ function project_default_page_manager_pages() {
       'offset' => '0',
       'more_link' => 0,
       'feed_icons' => 0,
-      'panel_args' => 0,
+      'panel_args' => 1,
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
@@ -162,7 +177,7 @@ function project_default_page_manager_pages() {
       'offset' => '0',
       'more_link' => 0,
       'feed_icons' => 0,
-      'panel_args' => 0,
+      'panel_args' => 1,
       'link_to_view' => 0,
       'args' => '',
       'url' => '',

@@ -23,6 +23,7 @@ function meeting_minutes_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Minutes';
+  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -57,6 +58,15 @@ function meeting_minutes_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Project (field_project) */
+  $handler->display->display_options['arguments']['field_project_tid']['id'] = 'field_project_tid';
+  $handler->display->display_options['arguments']['field_project_tid']['table'] = 'field_data_field_project';
+  $handler->display->display_options['arguments']['field_project_tid']['field'] = 'field_project_tid';
+  $handler->display->display_options['arguments']['field_project_tid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_project_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_project_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_project_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_project_tid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

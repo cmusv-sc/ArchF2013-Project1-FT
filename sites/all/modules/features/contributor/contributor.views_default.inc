@@ -58,6 +58,7 @@ function contributor_views_default_views() {
   $handler->display->display_options['arguments']['field_project_tid']['id'] = 'field_project_tid';
   $handler->display->display_options['arguments']['field_project_tid']['table'] = 'field_data_field_project';
   $handler->display->display_options['arguments']['field_project_tid']['field'] = 'field_project_tid';
+  $handler->display->display_options['arguments']['field_project_tid']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['field_project_tid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_project_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_project_tid']['summary']['format'] = 'default_summary';
