@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * contributor.field_group.inc
+ * advisor.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function contributor_field_group_info() {
+function advisor_field_group_info() {
   $export = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_contact_info|node|contributor|form';
+  $field_group->identifier = 'group_contact_info|node|advisor|form';
   $field_group->group_name = 'group_contact_info';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'contributor';
+  $field_group->bundle = 'advisor';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
@@ -37,7 +37,7 @@ function contributor_field_group_info() {
       ),
     ),
   );
-  $export['group_contact_info|node|contributor|form'] = $field_group;
+  $export['group_contact_info|node|advisor|form'] = $field_group;
 
   return $export;
 }

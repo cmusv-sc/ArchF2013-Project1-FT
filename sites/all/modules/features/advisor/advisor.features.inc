@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contributor.features.inc
+ * advisor.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function contributor_ctools_plugin_api($module = NULL, $api = NULL) {
+function advisor_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
@@ -19,19 +19,19 @@ function contributor_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function contributor_views_api($module = NULL, $api = NULL) {
+function advisor_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function contributor_node_info() {
+function advisor_node_info() {
   $items = array(
-    'contributor' => array(
-      'name' => t('Contributor'),
+    'advisor' => array(
+      'name' => t('Advisor'),
       'base' => 'node_content',
-      'description' => t('Project Contributor'),
+      'description' => t('Project advisor profile'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'help' => '',

@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * contributor.features.field_instance.inc
+ * advisor.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function contributor_field_default_field_instances() {
+function advisor_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-contributor-body'
-  $field_instances['node-contributor-body'] = array(
-    'bundle' => 'contributor',
+  // Exported field_instance: 'node-advisor-body'
+  $field_instances['node-advisor-body'] = array(
+    'bundle' => 'advisor',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -22,7 +22,7 @@ function contributor_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -55,9 +55,9 @@ function contributor_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contributor-field_contact_number'
-  $field_instances['node-contributor-field_contact_number'] = array(
-    'bundle' => 'contributor',
+  // Exported field_instance: 'node-advisor-field_contact_number'
+  $field_instances['node-advisor-field_contact_number'] = array(
+    'bundle' => 'advisor',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -66,7 +66,7 @@ function contributor_field_default_field_instances() {
         'module' => 'cck_phone',
         'settings' => array(),
         'type' => 'global_phone_number',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -318,10 +318,10 @@ function contributor_field_default_field_instances() {
         ),
         'hide_single_cc' => 0,
       ),
-      'default_country' => 'us',
+      'default_country' => 'af',
       'enable_country_level_validation' => 1,
       'enable_default_country' => 1,
-      'enable_extension' => 1,
+      'enable_extension' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -331,13 +331,13 @@ function contributor_field_default_field_instances() {
         'size' => 15,
       ),
       'type' => 'phone_number',
-      'weight' => 1,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-contributor-field_email'
-  $field_instances['node-contributor-field_email'] = array(
-    'bundle' => 'contributor',
+  // Exported field_instance: 'node-advisor-field_email'
+  $field_instances['node-advisor-field_email'] = array(
+    'bundle' => 'advisor',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -347,7 +347,7 @@ function contributor_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -370,13 +370,13 @@ function contributor_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => -1,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-contributor-field_page_url'
-  $field_instances['node-contributor-field_page_url'] = array(
-    'bundle' => 'contributor',
+  // Exported field_instance: 'node-advisor-field_page_url'
+  $field_instances['node-advisor-field_page_url'] = array(
+    'bundle' => 'advisor',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -389,7 +389,7 @@ function contributor_field_default_field_instances() {
           'trim_length' => 80,
         ),
         'type' => 'url_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -414,25 +414,25 @@ function contributor_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'url_external',
-      'weight' => 0,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-contributor-field_photo'
-  $field_instances['node-contributor-field_photo'] = array(
-    'bundle' => 'contributor',
+  // Exported field_instance: 'node-advisor-field_photo'
+  $field_instances['node-advisor-field_photo'] = array(
+    'bundle' => 'advisor',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -444,7 +444,7 @@ function contributor_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_photo',
     'label' => 'Photo',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -457,6 +457,7 @@ function contributor_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
@@ -467,85 +468,13 @@ function contributor_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-contributor-field_project'
-  $field_instances['node-contributor-field_project'] = array(
-    'bundle' => 'contributor',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_project',
-    'label' => 'Project',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'taxonomy_term-projects-field_page_'
-  $field_instances['taxonomy_term-projects-field_page_'] = array(
-    'bundle' => 'projects',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_page_',
-    'label' => 'Page ',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
   t('Contact No.');
   t('Email');
-  t('Page ');
   t('Page URL');
   t('Photo');
-  t('Project');
 
   return $field_instances;
 }

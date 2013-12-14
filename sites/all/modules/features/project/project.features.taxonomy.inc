@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contributor.features.taxonomy.inc
+ * project.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function contributor_taxonomy_default_vocabularies() {
+function project_taxonomy_default_vocabularies() {
   return array(
     'projects' => array(
       'name' => 'Projects',

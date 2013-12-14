@@ -47,7 +47,7 @@ function meeting_minutes_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 10,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -88,10 +88,10 @@ function meeting_minutes_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -188,6 +188,46 @@ function meeting_minutes_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-meeting_minutes-field_notes'
+  $field_instances['node-meeting_minutes-field_notes'] = array(
+    'bundle' => 'meeting_minutes',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_notes',
+    'label' => 'Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-meeting_minutes-field_project'
   $field_instances['node-meeting_minutes-field_project'] = array(
     'bundle' => 'meeting_minutes',
@@ -223,7 +263,7 @@ function meeting_minutes_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -233,6 +273,7 @@ function meeting_minutes_field_default_field_instances() {
   t('Agenda');
   t('Attendees');
   t('Date');
+  t('Notes');
   t('Project');
 
   return $field_instances;
