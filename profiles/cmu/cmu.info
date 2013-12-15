@@ -38,6 +38,8 @@ dependencies[] = views_content
 dependencies[] = date
 dependencies[] = date_popup
 dependencies[] = token
+dependencies[] = pathauto
+dependencies[] = strongarm
 
 dependencies[] = contributor
 dependencies[] = advisor
