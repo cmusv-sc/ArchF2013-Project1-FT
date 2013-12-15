@@ -14,7 +14,7 @@ function meeting_minutes_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_meeting_minutes';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_meeting_minutes'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -103,9 +103,7 @@ function meeting_minutes_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_meeting_minutes';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_meeting_minutes'] = $strongarm;
 
   $strongarm = new stdClass();
